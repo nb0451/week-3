@@ -1,11 +1,12 @@
 {
  "strategy": "heading",
- "built_at": "2026-10-28T17:15:14Z",
+ "built_at": "2026-10-28T17:23:45Z",
  "files": [
   "about.md",
   "experience.md",
   "projects.md",
-  "skills.md"
+  "skills.md",
+  "faq.md"
  ],
  "chunks": [
   {
@@ -112,6 +113,34 @@
    "text": "What I am still learning. AI engineering: how retrieval works, how to measure whether an AI system is any good, and how to deploy language-model apps.",
    "id": "skills-4",
    "chars": 150
+  },
+  {
+   "file": "faq.md",
+   "heading": "Notice period",
+   "text": "Notice period. I am a full-time student, so I have no notice period.",
+   "id": "faq-1",
+   "chars": 68
+  },
+  {
+   "file": "faq.md",
+   "heading": "References",
+   "text": "References. References are available on request.",
+   "id": "faq-2",
+   "chars": 48
+  },
+  {
+   "file": "faq.md",
+   "heading": "Location",
+   "text": "Location. I live in Leicester, UK, and study at Loughborough University.",
+   "id": "faq-3",
+   "chars": 72
+  },
+  {
+   "file": "faq.md",
+   "heading": "Contact",
+   "text": "Contact. You can email me at z.h07@icloud.com.",
+   "id": "faq-4",
+   "chars": 46
   }
  ]
 }
