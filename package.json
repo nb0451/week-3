@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-with-chat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A portfolio page with a chat that answers from your own notes.",
+  "scripts": {
+    "dev": "node dev.js",
+    "test": "node --test",
+    "eval": "node tests/run_eval.js",
+    "eval:tools": "node tests/run_tool_eval.js --fake"
+  }
+}

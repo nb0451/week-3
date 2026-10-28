@@ -1,0 +1,122 @@
+/* ==========================================================================
+   STYLING. This is the file to hand to an AI tool and ask it to restyle.
+   Nothing in here affects whether the chat works.
+   ========================================================================== */
+
+:root {
+  --bg: #fbfbfc;
+  --surface: #ffffff;
+  --ink: #1b1d22;
+  --ink-soft: #5c636e;
+  --line: #e3e5ea;
+  --accent: #2c4a7e;
+  --accent-soft: #eef1f7;
+  --ok: #1f6f4a;
+  --warn: #8a4b12;
+  --radius: 12px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a;
+    --surface: #1b1e24;
+    --ink: #eceef2;
+    --ink-soft: #a0a7b4;
+    --line: #2b2f37;
+    --accent: #8fb0e0;
+    --accent-soft: #232936;
+    --ok: #6fcfa0;
+    --warn: #e0ab6f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+.hero {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 72px 0 40px;
+}
+.hero h1 { margin: 0 0 6px; font-size: clamp(1.9rem, 5vw, 2.6rem); letter-spacing: -0.02em; }
+.headline { margin: 0 0 20px; color: var(--ink-soft); font-size: 1.1rem; }
+.links a {
+  color: var(--accent); text-decoration: none; margin-right: 18px;
+  border-bottom: 1px solid transparent; font-size: 0.95rem;
+}
+.links a:hover { border-bottom-color: var(--accent); }
+
+.panel { padding: 44px 0; border-bottom: 1px solid var(--line); }
+.panel:last-of-type { border-bottom: 0; }
+.panel h2 { margin: 0 0 8px; font-size: 1.35rem; letter-spacing: -0.01em; }
+.muted { color: var(--ink-soft); font-size: 0.93rem; }
+
+#ask-form { display: flex; gap: 10px; margin: 20px 0 12px; flex-wrap: wrap; }
+#question {
+  flex: 1 1 240px; min-width: 0; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--ink); font: inherit;
+}
+#question:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+#ask-button {
+  padding: 12px 22px; border: 0; border-radius: var(--radius);
+  background: var(--accent); color: #fff; font: inherit; font-weight: 600;
+  cursor: pointer;
+}
+#ask-button:disabled { opacity: 0.55; cursor: progress; }
+
+.suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.suggestions button {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft);
+  border-radius: 999px; padding: 6px 13px; font: inherit; font-size: 0.85rem;
+  cursor: pointer;
+}
+.suggestions button:hover { border-color: var(--accent); color: var(--accent); }
+
+.thread { margin-top: 20px; display: flex; flex-direction: column-reverse; gap: 18px; }
+.turn {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 18px 20px;
+}
+.turn .q { margin: 0 0 10px; font-weight: 600; }
+.turn .q::before { content: "Q  "; color: var(--accent); font-family: var(--mono); }
+.turn .a { margin: 0; }
+.turn .a.blocked { color: var(--warn); }
+
+.trace { margin-top: 14px; border-top: 1px dashed var(--line); padding-top: 10px; }
+.trace summary {
+  cursor: pointer; color: var(--ink-soft); font-size: 0.85rem;
+  font-family: var(--mono);
+}
+.trace-body { font-size: 0.83rem; font-family: var(--mono); margin-top: 10px; }
+.trace-body table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; }
+.trace-body th, .trace-body td {
+  text-align: left; padding: 4px 8px 4px 0; border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.trace-body th { color: var(--ink-soft); font-weight: 600; }
+.trace-h { color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.06em;
+  font-size: 0.72rem; margin: 12px 0 4px; }
+.pass { color: var(--ok); }
+.fail { color: var(--warn); }
+
+.prose h3 { margin: 26px 0 6px; font-size: 1.05rem; }
+.prose h4 { margin: 18px 0 4px; font-size: 0.95rem; color: var(--ink-soft); }
+.prose p { margin: 0 0 12px; }
+
+.foot { padding: 30px 20px 60px; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

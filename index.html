@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<meta name="description" content="Portfolio with a chat that answers from my own notes.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 id="owner-name">Loading…</h1>
+    <p class="headline" id="headline"></p>
+    <nav class="links" id="links">
+      <a href="#chat">Ask me something</a>
+      <a href="#sections">Background</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="chat" class="panel">
+    <h2>Ask me something</h2>
+    <p class="muted">
+      This chat answers from my own notes. If the notes do not cover it, it says so.
+    </p>
+
+    <form id="ask-form" autocomplete="off">
+      <label class="sr-only" for="question">Your question</label>
+      <input id="question" name="question" type="text"
+             placeholder="Where are you based?" maxlength="500" required>
+      <button type="submit" id="ask-button">Ask</button>
+    </form>
+
+    <div class="suggestions" id="suggestions"></div>
+
+    <div id="thread" class="thread" aria-live="polite"></div>
+  </section>
+
+  <section id="sections" class="panel">
+    <h2>Background</h2>
+    <div id="content-render" class="prose">Loading notes…</div>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p class="muted" id="foot-note"></p>
+</footer>
+
+<template id="turn-template">
+  <article class="turn">
+    <p class="q"></p>
+    <div class="a"></div>
+    <details class="trace">
+      <summary>What happened</summary>
+      <div class="trace-body"></div>
+    </details>
+  </article>
+</template>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+{
+  "note": "20 questions. 10 answerable from the four default files in the notes' own words. 3 answerable only from content/faq.md, which config.js leaves switched off. 2 that cannot be answered at all and must be refused. 5 paraphrases that share almost no words with the notes, which is where counting words stops working.",
+  "questions": [
+    {
+      "id": 1,
+      "kind": "answerable",
+      "q": "Where are you based?",
+      "expect_any": [
+        "bangalore"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "answerable",
+      "q": "What did splitting documents on headings do for accuracy?",
+      "expect_any": [
+        "14 points",
+        "fourteen points",
+        "14"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "answerable",
+      "q": "What accuracy did the support assistant start at and reach?",
+      "expect_any": [
+        "61",
+        "84"
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "answerable",
+      "q": "What is your main programming language?",
+      "expect_any": [
+        "python"
+      ]
+    },
+    {
+      "id": 5,
+      "kind": "answerable",
+      "q": "What did you work on at Harbour Systems?",
+      "expect_any": [
+        "logistics",
+        "dashboard"
+      ]
+    },
+    {
+      "id": 6,
+      "kind": "answerable",
+      "q": "What happened to the tickets about stale data?",
+      "expect_any": [
+        "fifteen",
+        "almost none",
+        "15"
+      ]
+    },
+    {
+      "id": 7,
+      "kind": "answerable",
+      "q": "Tell me about the news triage assistant project.",
+      "expect_any": [
+        "triage",
+        "four categories",
+        "categories"
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "answerable",
+      "q": "What kappa did the triage project score?",
+      "expect_any": [
+        "0.42",
+        "kappa"
+      ]
+    },
+    {
+      "id": 9,
+      "kind": "answerable",
+      "q": "What are you still learning?",
+      "expect_any": [
+        "agent framework",
+        "kubernetes"
+      ]
+    },
+    {
+      "id": 10,
+      "kind": "answerable",
+      "q": "Which deployment platforms have you used?",
+      "expect_any": [
+        "vercel",
+        "render"
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "needs_faq",
+      "q": "What is your notice period?",
+      "expect_any": [
+        "thirty days",
+        "30 days"
+      ]
+    },
+    {
+      "id": 12,
+      "kind": "needs_faq",
+      "q": "Can you share a reference?",
+      "expect_any": [
+        "on request",
+        "manager"
+      ]
+    },
+    {
+      "id": 13,
+      "kind": "needs_faq",
+      "q": "Can you overlap with European hours?",
+      "expect_any": [
+        "european",
+        "overlap"
+      ]
+    },
+    {
+      "id": 14,
+      "kind": "must_refuse",
+      "q": "Who won the cricket world cup?",
+      "expect_any": []
+    },
+    {
+      "id": 15,
+      "kind": "must_refuse",
+      "q": "What is the capital of Brazil?",
+      "expect_any": []
+    },
+    {
+      "id": 16,
+      "kind": "paraphrase",
+      "q": "How soon could you start?",
+      "expect_any": [
+        "thirty days",
+        "30 days"
+      ]
+    },
+    {
+      "id": 17,
+      "kind": "paraphrase",
+      "q": "What city do you live in?",
+      "expect_any": [
+        "bangalore"
+      ]
+    },
+    {
+      "id": 18,
+      "kind": "paraphrase",
+      "q": "Which language do you write most?",
+      "expect_any": [
+        "python"
+      ]
+    },
+    {
+      "id": 19,
+      "kind": "paraphrase",
+      "q": "Did you ever repair a job that failed quietly overnight?",
+      "expect_any": [
+        "nightly",
+        "batch",
+        "silently"
+      ]
+    },
+    {
+      "id": 20,
+      "kind": "paraphrase",
+      "q": "Do you work from home?",
+      "expect_any": [
+        "remotely",
+        "remote"
+      ]
+    }
+  ]
+}

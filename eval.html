@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Score your chat</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .scorewrap { max-width: 980px; }
+  .runbar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:18px 0; }
+  .scores { display:flex; flex-wrap:wrap; gap:14px; margin:22px 0; }
+  .score { background:var(--surface); border:1px solid var(--line);
+           border-radius:var(--radius); padding:14px 18px; min-width:150px; }
+  .score .n { font-size:1.7rem; font-weight:700; letter-spacing:-0.02em; }
+  .score .k { font-size:0.78rem; color:var(--ink-soft); text-transform:uppercase;
+              letter-spacing:0.06em; }
+  table.q { width:100%; border-collapse:collapse; font-size:0.87rem; margin-top:10px; }
+  table.q th, table.q td { text-align:left; padding:7px 9px;
+                           border-bottom:1px solid var(--line); vertical-align:top; }
+  table.q th { background:var(--accent-soft); font-size:0.75rem; text-transform:uppercase;
+               letter-spacing:0.05em; color:var(--ink-soft); }
+  .ok { color:var(--ok); font-weight:600; }
+  .no { color:var(--warn); font-weight:600; }
+  #copy { background:var(--surface); color:var(--ink); border:1px solid var(--line); }
+  progress { width:190px; height:10px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap scorewrap">
+    <h1>Score your chat</h1>
+    <p class="headline">Twenty questions, graded automatically. No terminal needed.</p>
+    <nav class="links"><a href="/">Back to the site</a></nav>
+  </div>
+</header>
+
+<main class="wrap scorewrap">
+  <section class="panel">
+    <p class="muted">
+      This runs every question in <code>questions.json</code> through your live chat
+      and grades the answers. Run it, change something in <code>config.js</code>,
+      push, and run it again. The difference between the two runs is your evidence.
+    </p>
+
+    <div class="runbar">
+      <button id="run">Run the evaluation</button>
+      <progress id="bar" max="20" value="0" hidden></progress>
+      <span class="muted" id="status"></span>
+    </div>
+
+    <div class="scores" id="scores" hidden></div>
+    <div id="detail"></div>
+    <div class="runbar" id="copywrap" hidden>
+      <button id="copy">Copy these numbers for your write-up</button>
+      <span class="muted" id="copied"></span>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="eval.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{
+ "strategy": "heading",
+ "built_at": "2026-10-23T13:35:38Z",
+ "files": [
+  "about.md",
+  "experience.md",
+  "projects.md",
+  "skills.md"
+ ],
+ "chunks": [
+  {
+   "file": "about.md",
+   "heading": "about",
+   "text": "I am Sample Person, an AI engineer. I build systems that put language models into production: retrieval pipelines, evaluation harnesses, and the plumbing that keeps them honest once real users arrive.\n\nI am based in Bangalore, India, and I work remotely. I am comfortable across the stack, but my centre of gravity is the backend: Python services, retrieval, and the measurement layer that tells you whether a change helped or hurt.\n\nBefore moving into AI work I spent three years as a full stack developer, which is where I learned that most production failures are boring: a missing index, a silent retry, a config value nobody reviewed.\n\nI studied computer science and finished with a focus on machine learning. My dissertation looked at how retrieval quality limits what a language model can do, which turned out to be the most useful thing I learned.\n\nWhat I want next is a role where the evaluation story matters as much as the demo. I am happiest on a team that measures things.",
+   "id": "about-1",
+   "chars": 985
+  },
+  {
+   "file": "experience.md",
+   "heading": "AI Engineer, Northwind Data (2024 to present)",
+   "text": "AI Engineer, Northwind Data (2024 to present). I own the retrieval layer of a customer support assistant that handles about four thousand conversations a week. When I joined, the assistant answered from a single flat prompt and nobody could say how often it was right.\n\nI built the first evaluation harness: a set of 120 labelled questions, scored automatically on every deploy. The first run told us we were at 61 percent. Within two months we were at 84 percent, and the thing that moved the number was not the model. It was chunking. Splitting documents on headings instead of on a fixed character count was worth 14 points on its own.\n\nI also added a refusal path. The assistant now says it does not know rather than inventing a policy, which cut escalations from the support team by a third.",
+   "id": "experience-1",
+   "chars": 796
+  },
+  {
+   "file": "experience.md",
+   "heading": "Full Stack Developer, Harbour Systems (2021 to 2024)",
+   "text": "Full Stack Developer, Harbour Systems (2021 to 2024). I worked on an internal logistics dashboard used by about two hundred staff. Python on the back, React on the front, PostgreSQL underneath.\n\nThe work I am proudest of is unglamorous: I replaced a nightly batch job that regularly failed silently with an incremental pipeline that reported its own health. Support tickets about stale data went from roughly fifteen a month to almost none.\n\nI was also the person who introduced tests to that codebase. Not many, and not quickly, but enough that the next person could change things without fear.",
+   "id": "experience-2",
+   "chars": 595
+  },
+  {
+   "file": "experience.md",
+   "heading": "Intern, Harbour Systems (2021)",
+   "text": "Intern, Harbour Systems (2021). Six months writing internal tooling. Mostly scripts. It taught me to read other people's code, which is most of the job.",
+   "id": "experience-3",
+   "chars": 152
+  },
+  {
+   "file": "projects.md",
+   "heading": "News triage assistant",
+   "text": "News triage assistant. A classifier and triage app for news items. It sorts an item into one of four categories, decides whether a question needs explaining or refusing, retrieves a relevant note from a small knowledge base, and records every run so the behaviour can be scored afterwards.\n\nThe interesting part is the config file. The prompt, the routing rules, the guardrails and the retrieval settings all live in one place in plain language, so changing behaviour does not mean changing code. I built it that way after watching non-engineers be unable to contribute to a system they understood perfectly well.\n\nScored 56.7 percent accuracy with a Cohen's kappa of 0.42 on the first pass. After fixing the prompt to name all four categories and to say what to do when two categories both fit, it went to 83 percent.\n\nStack: Python, Gradio, SQLite, Groq.",
+   "id": "projects-1",
+   "chars": 856
+  },
+  {
+   "file": "projects.md",
+   "heading": "Text classification from scratch",
+   "text": "Text classification from scratch. A news topic classifier built without a framework: hand labelling, inter annotator agreement, TF-IDF features, logistic regression, confusion matrix.\n\nTwo things surprised me. First, my own labels disagreed with a second labeller about one time in five, which puts a hard ceiling on any accuracy claim. Second, a deliberately leaky split scored 1.000 on a 200 row pool, which is how I learned to be suspicious of a perfect number.\n\nStack: Python, scikit-learn, pandas.",
+   "id": "projects-2",
+   "chars": 502
+  },
+  {
+   "file": "projects.md",
+   "heading": "This portfolio",
+   "text": "This portfolio. The site you are reading. A static page with a chat box that answers questions about me from my own notes. Retrieval runs in the browser, generation runs in a serverless function so the API key never reaches the client.\n\nStack: HTML, CSS, JavaScript, Vercel Functions, Groq.",
+   "id": "projects-3",
+   "chars": 290
+  },
+  {
+   "file": "skills.md",
+   "heading": "Languages",
+   "text": "Languages. Python is my main language and the one I am fastest in. JavaScript second, mostly for front ends and serverless functions. SQL well enough to read a query plan and fix the obvious problem.",
+   "id": "skills-1",
+   "chars": 199
+  },
+  {
+   "file": "skills.md",
+   "heading": "Retrieval and evaluation",
+   "text": "Retrieval and evaluation. Chunking strategies and why they matter more than people expect. Keyword versus dense retrieval, and when the cheaper one is good enough. Cosine similarity. Building labelled evaluation sets. Inter annotator agreement with Cohen's kappa. LLM as judge, including the part where you check the judge against human labels before trusting it.",
+   "id": "skills-2",
+   "chars": 363
+  },
+  {
+   "file": "skills.md",
+   "heading": "Infrastructure",
+   "text": "Infrastructure. Vercel and Render for deployment. PostgreSQL, including Neon. GitHub Actions for CI. Docker to the level of writing a working Dockerfile, not to the level of running a cluster.",
+   "id": "skills-3",
+   "chars": 192
+  },
+  {
+   "file": "skills.md",
+   "heading": "Models and tools",
+   "text": "Models and tools. Groq for inference. Langfuse for tracing and scoring. scikit-learn for classical baselines, which are still the right first move more often than not.",
+   "id": "skills-4",
+   "chars": 167
+  },
+  {
+   "file": "skills.md",
+   "heading": "What I am still learning",
+   "text": "What I am still learning. Agent frameworks beyond simple tool calling. I have built tool loops by hand and want to understand what the frameworks actually buy you. Also Kubernetes, which I keep deferring.",
+   "id": "skills-5",
+   "chars": 204
+  }
+ ]
+}
