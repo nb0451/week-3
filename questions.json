@@ -57,19 +57,19 @@
     {
       "id": 7,
       "kind": "answerable",
-      "q": "Tell me about the Newsroom Triage project.",
+      "q": "What does your flight simulator do?",
       "expect_any": [
-        "newsroom",
-        "classifier",
-        "render"
+        "flight",
+        "navigation"
       ]
     },
     {
       "id": 8,
       "kind": "answerable",
-      "q": "What kappa did your labels score against the official ones?",
+      "q": "What did you work on at Ford?",
       "expect_any": [
-        "0.73"
+        "battery",
+        "ros"
       ]
     },
     {
@@ -138,10 +138,11 @@
     {
       "id": 17,
       "kind": "paraphrase",
-      "q": "What do you get up to at weekends?",
+      "q": "Have you ever given your time for free?",
       "expect_any": [
-        "padel",
-        "chess"
+        "smallpeice",
+        "model planes",
+        "stem"
       ]
     },
     {
