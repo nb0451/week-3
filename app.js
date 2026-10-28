@@ -9,18 +9,19 @@
 // ---------------------------------------------------------------------------
 
 import * as cfg from "./config.js";
-import { retrieve, buildContext, RETRIEVAL_METHOD } from "./lib/retrieve.js";
+import { retrieve, buildContext, RETRIEVAL_METHOD } from "./lib/retrieve_vector.js";
 
 const $ = (sel) => document.querySelector(sel);
 
 const SUGGESTED = [
   "Where are you based?",
-  "What did chunking do for accuracy?",
+  "What did you work on at Ada Innovate?",
   "What is your notice period?",
   "Who won the world cup?",
 ];
 
 let CHUNKS = [];
+let VECTORISER = null;
 
 // --- tiny markdown render, headings and paragraphs only --------------------
 function renderMarkdown(md) {
@@ -96,6 +97,7 @@ async function ask(question) {
   const passages = retrieve(question, CHUNKS, {
     passages: cfg.PASSAGES,
     floor: cfg.SIMILARITY_FLOOR,
+    vectoriser: VECTORISER,
   });
   const { context, droppedForSpace } = buildContext(
     passages,
@@ -125,6 +127,19 @@ async function ask(question) {
     if (data.blocked) answerEl.classList.add("blocked");
   }
 
+  // sources: always visible under the answer, no need to open the panel
+  const used = (data.trace && data.trace.retrieval) || [];
+  const srcEl = document.createElement("div");
+  srcEl.className = "sources";
+  srcEl.style.cssText = "font-size:0.85em;opacity:0.8;margin-top:6px;";
+  srcEl.textContent = used.length
+    ? "Sources: " +
+      used
+        .map((r) => `${r.id} (${r.heading || "no heading"}, score ${r.score})`)
+        .join("; ")
+    : "Sources: none, no passage scored above the similarity floor.";
+  answerEl.insertAdjacentElement("afterend", srcEl);
+
   if (cfg.SHOW_TRACE && data.trace) {
     let html = renderTrace(data.trace);
     if (droppedForSpace > 0) {
@@ -148,6 +163,7 @@ async function start() {
   try {
     const doc = await (await fetch("chunks.json")).json();
     CHUNKS = doc.chunks || [];
+    VECTORISER = doc.vectoriser || null;
     $("#foot-note").textContent =
       `${CHUNKS.length} chunks, built ${doc.built_at}, strategy "${doc.strategy}".`;
   } catch {
