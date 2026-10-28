@@ -6,19 +6,20 @@
 // ===========================================================================
 
 // Your name, as it should appear on the page and in the chat answers.
-export const OWNER_NAME = "Sample Person";
+export const OWNER_NAME = "Zaid Haris";
 
 // One line under your name.
-export const HEADLINE = "AI Engineer";
+export const HEADLINE = "Robotics and Control Engineering student, interested in AI";
 
 // The instruction given to the model before every answer.
 // Keep it short. Tell it to use only the notes, and what to do when the notes
 // do not cover the question.
 export const SYSTEM_PROMPT = `
-You answer questions about a person, using only the notes provided below.
+You answer questions about Zaid Haris, using only the notes provided below.
 If the notes do not contain the answer, say you do not know.
 Keep answers to three sentences or fewer.
-Speak about the person in the first person, as if you were them.
+Speak in the first person, as if you were Zaid.
+Be friendly and plain, not formal.
 `;
 
 // What to say when the question has nothing to do with you.
@@ -29,13 +30,13 @@ export const OFF_TOPIC_REPLY =
 export const BANNED_PHRASES = ["as an ai", "i am a language model", "as a large language"];
 
 // Which files in content/ the chat is allowed to read.
-// NOTE: content/faq.md exists but is NOT in this list. Three of the test
-// questions in questions.json can only be answered from it.
+// This list and the files you give the notebook must be the same five files.
 export const CONTENT_FILES = [
   "about.md",
   "experience.md",
   "projects.md",
   "skills.md",
+  "faq.md",
 ];
 
 // How many passages to send to the model.
