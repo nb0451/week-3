@@ -1,40 +1,19 @@
 # Projects
 
-## News triage assistant
+## Autonomous EV Charging Robot (group coursework, simulation)
+I led design engineering and project management for a team of 6 on a simulated EV charging robot with an arm, LiDAR and computer vision. We identified 9 failure modes, with a mitigation for each. I chose the actuators and motors and worked with my teammates to fit them into the team's CAD.
 
-A classifier and triage app for news items. It sorts an item into one of four
-categories, decides whether a question needs explaining or refusing, retrieves
-a relevant note from a small knowledge base, and records every run so the
-behaviour can be scored afterwards.
+## Adaptive Low-Power Temperature Monitor (Arduino, individual coursework)
+I built an Arduino data logger that adjusts its sampling rate using an on-board DFT and the Nyquist criterion. I cut the sampling rate by 50% (from 1 Hz to about 0.5 Hz) on a slow signal, within an estimated 1.5 KB of the board's 2 KB of SRAM. I logged the data over serial and analysed it in Python. The code is on GitHub.
 
-The interesting part is the config file. The prompt, the routing rules, the
-guardrails and the retrieval settings all live in one place in plain language,
-so changing behaviour does not mean changing code. I built it that way after
-watching non-engineers be unable to contribute to a system they understood
-perfectly well.
+## Autonomous Digital Flight Simulator (personal project)
+A flight simulator in Python, using object-oriented code and custom control loops for navigation and flight paths.
 
-Scored 56.7 percent accuracy with a Cohen's kappa of 0.42 on the first pass.
-After fixing the prompt to name all four categories and to say what to do when
-two categories both fit, it went to 83 percent.
+## Week 1 project: Ground Truth (AI evaluation)
+I hand-labelled 30 news headlines into four categories (World, Sports, Business and Sci/Tech), had an AI model label the same 30 with two different prompts, and compared everything against the official AG News labels. My labels agreed with the official ones 80% of the time (Cohen's kappa 0.73). Business and Sci/Tech were confused most. I also showed that always answering World scores 80% accuracy on an imbalanced set but a kappa of 0.00, and that a TF-IDF classifier tested on its own training data scored 1.00 against 0.62 when tested honestly.
 
-Stack: Python, Gradio, SQLite, Groq.
+## Week 2 project: Newsroom Triage (deployed app)
+I put a Python news classifier on GitHub with automated tests that run on every change, fixed its three failing tests, deployed it on Render, and added a feature that asks the model twice when it is unsure. Its accuracy on my 30 test headlines went from 20% to about 83% to 87% (25 or 26 of 30) once I found that the model's replies were being cut off by a token limit. The free hosting took 65 seconds to wake up after sitting idle.
 
-## Text classification from scratch
-
-A news topic classifier built without a framework: hand labelling, inter
-annotator agreement, TF-IDF features, logistic regression, confusion matrix.
-
-Two things surprised me. First, my own labels disagreed with a second labeller
-about one time in five, which puts a hard ceiling on any accuracy claim.
-Second, a deliberately leaky split scored 1.000 on a 200 row pool, which is how
-I learned to be suspicious of a perfect number.
-
-Stack: Python, scikit-learn, pandas.
-
-## This portfolio
-
-The site you are reading. A static page with a chat box that answers questions
-about me from my own notes. Retrieval runs in the browser, generation runs in a
-serverless function so the API key never reaches the client.
-
-Stack: HTML, CSS, JavaScript, Vercel Functions, Groq.
+## Week 3 project: this portfolio chat
+This page has a chat that answers questions about me from my own notes. It is deployed on Vercel, and I am measuring how well its retrieval works.

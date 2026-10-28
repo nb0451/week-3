@@ -1,32 +1,13 @@
 # Skills
 
-## Languages
+## Programming
+My main programming language is Python. I have used it with NumPy, Pandas, Matplotlib and scikit-learn, and for object-oriented design. I also use MATLAB and Simulink, SQL and database design, and Tkinter for GUIs.
 
-Python is my main language and the one I am fastest in. JavaScript second,
-mostly for front ends and serverless functions. SQL well enough to read a query
-plan and fix the obvious problem.
+## Robotics and control
+Control loop design, ROS package integration, and project coordination. I led a team of 6 on a simulated robot project.
 
-## Retrieval and evaluation
-
-Chunking strategies and why they matter more than people expect. Keyword versus
-dense retrieval, and when the cheaper one is good enough. Cosine similarity.
-Building labelled evaluation sets. Inter annotator agreement with Cohen's
-kappa. LLM as judge, including the part where you check the judge against human
-labels before trusting it.
-
-## Infrastructure
-
-Vercel and Render for deployment. PostgreSQL, including Neon. GitHub Actions
-for CI. Docker to the level of writing a working Dockerfile, not to the level
-of running a cluster.
-
-## Models and tools
-
-Groq for inference. Langfuse for tracing and scoring. scikit-learn for
-classical baselines, which are still the right first move more often than not.
+## Tools and practice
+Git and GitHub, GitHub Actions, technical documentation, iterative testing and debugging, and risk assessment. I have deployed apps on Render and Vercel and used Google Colab and the Groq API.
 
 ## What I am still learning
-
-Agent frameworks beyond simple tool calling. I have built tool loops by hand
-and want to understand what the frameworks actually buy you. Also Kubernetes,
-which I keep deferring.
+AI engineering: how retrieval works, how to measure whether an AI system is any good, and how to deploy language-model apps.
