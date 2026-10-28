@@ -1,31 +1,30 @@
 {
-  "note": "20 questions. 10 answerable from the four default files in the notes' own words. 3 answerable only from content/faq.md, which config.js leaves switched off. 2 that cannot be answered at all and must be refused. 5 paraphrases that share almost no words with the notes, which is where counting words stops working.",
+  "note": "20 questions about Zaid Haris. 10 answerable from the notes in their own words. 3 answerable only from content/faq.md. 2 that cannot be answered at all and must be refused. 5 paraphrases that share almost no words with the notes, which is where counting words stops working.",
   "questions": [
     {
       "id": 1,
       "kind": "answerable",
       "q": "Where are you based?",
       "expect_any": [
-        "bangalore"
+        "leicester"
       ]
     },
     {
       "id": 2,
       "kind": "answerable",
-      "q": "What did splitting documents on headings do for accuracy?",
+      "q": "How many visitors have your websites had?",
       "expect_any": [
-        "14 points",
-        "fourteen points",
-        "14"
+        "15,000",
+        "15000"
       ]
     },
     {
       "id": 3,
       "kind": "answerable",
-      "q": "What accuracy did the support assistant start at and reach?",
+      "q": "What did you work on at Ada Innovate?",
       "expect_any": [
-        "61",
-        "84"
+        "conference",
+        "technology"
       ]
     },
     {
@@ -39,39 +38,38 @@
     {
       "id": 5,
       "kind": "answerable",
-      "q": "What did you work on at Harbour Systems?",
+      "q": "How many failure modes did you identify on the EV charging robot?",
       "expect_any": [
-        "logistics",
-        "dashboard"
+        "9",
+        "nine"
       ]
     },
     {
       "id": 6,
       "kind": "answerable",
-      "q": "What happened to the tickets about stale data?",
+      "q": "How much did you cut the sampling rate on the temperature monitor?",
       "expect_any": [
-        "fifteen",
-        "almost none",
-        "15"
+        "50%",
+        "half",
+        "0.5"
       ]
     },
     {
       "id": 7,
       "kind": "answerable",
-      "q": "Tell me about the news triage assistant project.",
+      "q": "Tell me about the Newsroom Triage project.",
       "expect_any": [
-        "triage",
-        "four categories",
-        "categories"
+        "newsroom",
+        "classifier",
+        "render"
       ]
     },
     {
       "id": 8,
       "kind": "answerable",
-      "q": "What kappa did the triage project score?",
+      "q": "What kappa did your labels score against the official ones?",
       "expect_any": [
-        "0.42",
-        "kappa"
+        "0.73"
       ]
     },
     {
@@ -79,8 +77,8 @@
       "kind": "answerable",
       "q": "What are you still learning?",
       "expect_any": [
-        "agent framework",
-        "kubernetes"
+        "ai engineering",
+        "retrieval"
       ]
     },
     {
@@ -88,8 +86,8 @@
       "kind": "answerable",
       "q": "Which deployment platforms have you used?",
       "expect_any": [
-        "vercel",
-        "render"
+        "render",
+        "vercel"
       ]
     },
     {
@@ -97,32 +95,30 @@
       "kind": "needs_faq",
       "q": "What is your notice period?",
       "expect_any": [
-        "thirty days",
-        "30 days"
+        "no notice",
+        "student"
       ]
     },
     {
       "id": 12,
       "kind": "needs_faq",
-      "q": "Can you share a reference?",
+      "q": "Are references available?",
       "expect_any": [
-        "on request",
-        "manager"
+        "on request"
       ]
     },
     {
       "id": 13,
       "kind": "needs_faq",
-      "q": "Can you overlap with European hours?",
+      "q": "What is your email address?",
       "expect_any": [
-        "european",
-        "overlap"
+        "icloud"
       ]
     },
     {
       "id": 14,
       "kind": "must_refuse",
-      "q": "Who won the cricket world cup?",
+      "q": "Who won the cricket final?",
       "expect_any": []
     },
     {
@@ -134,45 +130,44 @@
     {
       "id": 16,
       "kind": "paraphrase",
-      "q": "How soon could you start?",
+      "q": "Which town do you call home?",
       "expect_any": [
-        "thirty days",
-        "30 days"
+        "leicester"
       ]
     },
     {
       "id": 17,
       "kind": "paraphrase",
-      "q": "What city do you live in?",
+      "q": "What do you get up to at weekends?",
       "expect_any": [
-        "bangalore"
+        "padel",
+        "chess"
       ]
     },
     {
       "id": 18,
       "kind": "paraphrase",
-      "q": "Which language do you write most?",
+      "q": "Have you ever organised an event?",
       "expect_any": [
-        "python"
+        "conference"
       ]
     },
     {
       "id": 19,
       "kind": "paraphrase",
-      "q": "Did you ever repair a job that failed quietly overnight?",
+      "q": "Did you ever teach anyone?",
       "expect_any": [
-        "nightly",
-        "batch",
-        "silently"
+        "tuition",
+        "tutor",
+        "maths"
       ]
     },
     {
       "id": 20,
       "kind": "paraphrase",
-      "q": "Do you work from home?",
+      "q": "What do you code in the most?",
       "expect_any": [
-        "remotely",
-        "remote"
+        "python"
       ]
     }
   ]
