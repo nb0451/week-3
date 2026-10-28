@@ -6,7 +6,7 @@
 // ---------------------------------------------------------------------------
 
 import * as cfg from "./config.js";
-import { retrieve, buildContext, RETRIEVAL_METHOD } from "./lib/retrieve.js";
+import { retrieve, buildContext, RETRIEVAL_METHOD } from "./lib/retrieve_vector.js";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
@@ -22,10 +22,11 @@ async function run() {
   $("#scores").hidden = true;
   $("#copywrap").hidden = true;
 
-  let chunks, set;
+  let chunks, set, vectoriser = null;
   try {
     const doc = await (await fetch("chunks.json")).json();
     chunks = doc.chunks || [];
+    vectoriser = doc.vectoriser || null;
     set = (await (await fetch("questions.json")).json()).questions;
   } catch (err) {
     $("#status").textContent = `Could not load chunks.json or questions.json: ${err.message}`;
@@ -46,6 +47,7 @@ async function run() {
     $("#status").textContent = `question ${item.id} of ${set.length}`;
     const passages = retrieve(item.q, chunks, {
       passages: cfg.PASSAGES, floor: cfg.SIMILARITY_FLOOR,
+      vectoriser,
     });
     const { context } = buildContext(passages, cfg.MAX_CONTEXT_CHARS);
     charSum += context.length;
