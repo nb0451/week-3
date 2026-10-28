@@ -1,6 +1,6 @@
 {
- "strategy": "window",
- "built_at": "2026-10-28T17:30:24Z",
+ "strategy": "heading",
+ "built_at": "2026-10-28T17:31:38Z",
  "files": [
   "about.md",
   "experience.md",
@@ -11,59 +11,136 @@
  "chunks": [
   {
    "file": "about.md",
-   "heading": "about",
-   "text": "## Who I am I am Zaid Haris, a second-year BEng Robotics, Mechatronics and Control Engineering student at Loughborough University. I am interested in robotics, mechatronics and AI. ## Where I am based I am based in Leicester, UK, and I study at Loughborough University. ## Education I started at Loughborough in 2025. My Year 1 modules included Applied Engineering, Core Maths, Dynamic Systems Analysis, and Programming and Software Engineering. My Year 2 modules include Control System Design, Robotic Systems Technology, and Project Design and Management.",
+   "heading": "Who I am",
+   "text": "Who I am. I am Zaid Haris, a second-year BEng Robotics, Mechatronics and Control Engineering student at Loughborough University. I am interested in robotics, mechatronics and AI.",
    "id": "about-1",
-   "chars": 557
+   "chars": 178
+  },
+  {
+   "file": "about.md",
+   "heading": "Where I am based",
+   "text": "Where I am based. I am based in Leicester, UK, and I study at Loughborough University.",
+   "id": "about-2",
+   "chars": 86
+  },
+  {
+   "file": "about.md",
+   "heading": "Education",
+   "text": "Education. I started at Loughborough in 2025. My Year 1 modules included Applied Engineering, Core Maths, Dynamic Systems Analysis, and Programming and Software Engineering. My Year 2 modules include Control System Design, Robotic Systems Technology, and Project Design and Management.",
+   "id": "about-3",
+   "chars": 285
   },
   {
    "file": "experience.md",
-   "heading": "experience",
-   "text": "## Freelance Web Developer (self-employed) I designed, built and hosted live websites that have had over 15,000 visitors in total, including The Great British Curry Festival. ## Technical Coordinator at Ada Innovate (Oct 2023 to June 2024, Cardiff, contract) I ran the technology side of an international academic conference, from planning through to AV and technical support on the day. ## GCSE Maths Tutor (Dec 2023 to Jul 2024, self-employed) I gave one-to-one GCSE maths tuition, focused on each student's weak areas ahead of their exams. ## Virtual Work Experience with Ford, GE Aerospace and JL",
+   "heading": "Freelance Web Developer (self-employed)",
+   "text": "Freelance Web Developer (self-employed). I designed, built and hosted live websites that have had over 15,000 visitors in total, including The Great British Curry Festival.",
    "id": "experience-1",
-   "chars": 600
+   "chars": 172
   },
   {
    "file": "experience.md",
-   "heading": "experience",
-   "text": "ve one-to-one GCSE maths tuition, focused on each student's weak areas ahead of their exams. ## Virtual Work Experience with Ford, GE Aerospace and JLR (Oct to Nov 2024) At Ford I worked on battery testing and ROS package integration. At GE Aerospace I looked at propulsion energy sources. For JLR I did the Drive Your Future programme. ## Volunteer at the Smallpeice Trust STEM Day (Mar 2024) I helped students assemble and test model planes, working through problems with them as they came up.",
+   "heading": "Technical Coordinator at Ada Innovate (Oct 2023 to June 2024, Cardiff, contract)",
+   "text": "Technical Coordinator at Ada Innovate (Oct 2023 to June 2024, Cardiff, contract). I ran the technology side of an international academic conference, from planning through to AV and technical support on the day.",
    "id": "experience-2",
-   "chars": 495
+   "chars": 210
+  },
+  {
+   "file": "experience.md",
+   "heading": "GCSE Maths Tutor (Dec 2023 to Jul 2024, self-employed)",
+   "text": "GCSE Maths Tutor (Dec 2023 to Jul 2024, self-employed). I gave one-to-one GCSE maths tuition, focused on each student's weak areas ahead of their exams.",
+   "id": "experience-3",
+   "chars": 152
+  },
+  {
+   "file": "experience.md",
+   "heading": "Virtual Work Experience with Ford, GE Aerospace and JLR (Oct to Nov 2024)",
+   "text": "Virtual Work Experience with Ford, GE Aerospace and JLR (Oct to Nov 2024). At Ford I worked on battery testing and ROS package integration. At GE Aerospace I looked at propulsion energy sources. For JLR I did the Drive Your Future programme.",
+   "id": "experience-4",
+   "chars": 241
+  },
+  {
+   "file": "experience.md",
+   "heading": "Volunteer at the Smallpeice Trust STEM Day (Mar 2024)",
+   "text": "Volunteer at the Smallpeice Trust STEM Day (Mar 2024). I helped students assemble and test model planes, working through problems with them as they came up.",
+   "id": "experience-5",
+   "chars": 156
   },
   {
    "file": "projects.md",
-   "heading": "projects",
-   "text": "## Autonomous EV Charging Robot (group coursework, simulation) I led design engineering and project management for a team of 6 on a simulated EV charging robot with an arm, LiDAR and computer vision. We identified 9 failure modes, with a mitigation for each. I chose the actuators and motors and worked with my teammates to fit them into the team's CAD. ## Adaptive Low-Power Temperature Monitor (Arduino, individual coursework) I built an Arduino data logger that adjusts its sampling rate using an on-board DFT and the Nyquist criterion. I cut the sampling rate by 50% (from 1 Hz to about 0.5 Hz) o",
+   "heading": "Autonomous EV Charging Robot (group coursework, simulation)",
+   "text": "Autonomous EV Charging Robot (group coursework, simulation). I led design engineering and project management for a team of 6 on a simulated EV charging robot with an arm, LiDAR and computer vision. We identified 9 failure modes, with a mitigation for each. I chose the actuators and motors and worked with my teammates to fit them into the team's CAD.",
    "id": "projects-1",
-   "chars": 600
+   "chars": 351
   },
   {
    "file": "projects.md",
-   "heading": "projects",
-   "text": "ta logger that adjusts its sampling rate using an on-board DFT and the Nyquist criterion. I cut the sampling rate by 50% (from 1 Hz to about 0.5 Hz) on a slow signal, within an estimated 1.5 KB of the board's 2 KB of SRAM. I logged the data over serial and analysed it in Python. The code is on GitHub. ## Autonomous Digital Flight Simulator (personal project) A flight simulator in Python, using object-oriented code and custom control loops for navigation and flight paths.",
+   "heading": "Adaptive Low-Power Temperature Monitor (Arduino, individual coursework)",
+   "text": "Adaptive Low-Power Temperature Monitor (Arduino, individual coursework). I built an Arduino data logger that adjusts its sampling rate using an on-board DFT and the Nyquist criterion. I cut the sampling rate by 50% (from 1 Hz to about 0.5 Hz) on a slow signal, within an estimated 1.5 KB of the board's 2 KB of SRAM. I logged the data over serial and analysed it in Python. The code is on GitHub.",
    "id": "projects-2",
-   "chars": 475
+   "chars": 396
+  },
+  {
+   "file": "projects.md",
+   "heading": "Autonomous Digital Flight Simulator (personal project)",
+   "text": "Autonomous Digital Flight Simulator (personal project). A flight simulator in Python, using object-oriented code and custom control loops for navigation and flight paths.",
+   "id": "projects-3",
+   "chars": 170
   },
   {
    "file": "skills.md",
-   "heading": "skills",
-   "text": "## Programming My main programming language is Python. I have used it with NumPy, Pandas, Matplotlib and scikit-learn, and for object-oriented design. I also use MATLAB and Simulink, SQL and database design, and Tkinter for GUIs. ## Robotics and control Control loop design, ROS package integration, and project coordination. I led a team of 6 on a simulated robot project. ## Tools and practice Git and GitHub, GitHub Actions, technical documentation, iterative testing and debugging, and risk assessment. I have deployed apps on Render and Vercel and used Google Colab and the Groq API. ## What I a",
+   "heading": "Programming",
+   "text": "Programming. My main programming language is Python. I have used it with NumPy, Pandas, Matplotlib and scikit-learn, and for object-oriented design. I also use MATLAB and Simulink, SQL and database design, and Tkinter for GUIs.",
    "id": "skills-1",
-   "chars": 600
+   "chars": 227
   },
   {
    "file": "skills.md",
-   "heading": "skills",
-   "text": "n, iterative testing and debugging, and risk assessment. I have deployed apps on Render and Vercel and used Google Colab and the Groq API. ## What I am still learning AI engineering: how retrieval works, how to measure whether an AI system is any good, and how to deploy language-model apps.",
+   "heading": "Robotics and control",
+   "text": "Robotics and control. Control loop design, ROS package integration, and project coordination. I led a team of 6 on a simulated robot project.",
    "id": "skills-2",
-   "chars": 291
+   "chars": 141
+  },
+  {
+   "file": "skills.md",
+   "heading": "Tools and practice",
+   "text": "Tools and practice. Git and GitHub, GitHub Actions, technical documentation, iterative testing and debugging, and risk assessment. I have deployed apps on Render and Vercel and used Google Colab and the Groq API.",
+   "id": "skills-3",
+   "chars": 212
+  },
+  {
+   "file": "skills.md",
+   "heading": "What I am still learning",
+   "text": "What I am still learning. AI engineering: how retrieval works, how to measure whether an AI system is any good, and how to deploy language-model apps.",
+   "id": "skills-4",
+   "chars": 150
   },
   {
    "file": "faq.md",
-   "heading": "faq",
-   "text": "## Notice period I am a full-time student, so I have no notice period. ## References References are available on request. ## Location I live in Leicester, UK, and study at Loughborough University. ## Contact You can email me at z.h07@icloud.com.",
+   "heading": "Notice period",
+   "text": "Notice period. I am a full-time student, so I have no notice period.",
    "id": "faq-1",
-   "chars": 245
+   "chars": 68
+  },
+  {
+   "file": "faq.md",
+   "heading": "References",
+   "text": "References. References are available on request.",
+   "id": "faq-2",
+   "chars": 48
+  },
+  {
+   "file": "faq.md",
+   "heading": "Location",
+   "text": "Location. I live in Leicester, UK, and study at Loughborough University.",
+   "id": "faq-3",
+   "chars": 72
+  },
+  {
+   "file": "faq.md",
+   "heading": "Contact",
+   "text": "Contact. You can email me at z.h07@icloud.com.",
+   "id": "faq-4",
+   "chars": 46
   }
  ]
 }
